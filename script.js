@@ -44,4 +44,17 @@ window.onload = function () {
 
   doodlerLeftImg = new Image();
   doodlerLeftImg.src = "./doodler-left.png";
+
+  requestAnimationFrame(update);
 };
+
+function update() {
+  requestAnimationFrame(update);
+  context.drawImage(
+    doodler.img,
+    doodler.x,
+    doodler.y,
+    doodler.width,
+    doodler.height
+  );
+}
